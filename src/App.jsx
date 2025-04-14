@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
-
-  return (
-      <div className="space-y-4">
-      <div className="size-20 rounded-2xl bg-secondary"></div>
-      <div className="size-20 rounded-2xl bg-tertiary"></div>
-      </div>
-  );
+function Board() {
+  return <section></section>;
 }
 
-export default App;
+export default function Game() {
+  return (
+    <section className="size-96 p-4 bg-secondary rounded-2xl">
+      <h1 className="text-center text-4xl font-bold">Tic-Tac-Toe</h1>
+    </section>
+  );
+}
