@@ -2,7 +2,8 @@
 
 @theme {
   --font-poppins: "Poppins";
-  --color-main: var(--color-blue-600);
+  --color-main: var(--color-cyan-500);
+  --color-light: var(--color-cyan-300);
   --color-primary: var(--color-cyan-800);
   --color-secondary: var(--color-cyan-700);
   --color-tertiary: var(--color-cyan-600);
