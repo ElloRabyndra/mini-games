@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import "./App.css";
+import "./css/App.css";
 import Board from "./components/Board";
 import Info from "./components/info";
 
@@ -31,7 +31,7 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </section>
       <section className="game-info">
-        {/* <Info history={history} jumpTo={jumpTo} /> */}
+        <Info history={history} jumpTo={jumpTo} />
       </section>
     </main>
   );
