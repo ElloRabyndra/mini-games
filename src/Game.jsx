@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState } from "react";
 import "./App.css";
-import Board from './components/Board';
-
+import Board from "./components/Board";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -36,37 +35,16 @@ export default function Game() {
   // });
 
   return (
-    <div className="game">
-      <h1 className='m-4 text-center text-4xl md:text-5xl font-bold '>Tic-Tac-Toe</h1>
-      <div className="game-board">
+    <main className="game">
+      <header>
+        <h1 className="m-4 text-center text-4xl md:text-5xl font-bold ">
+          Tic-Tac-Toe
+        </h1>
+      </header>
+      <section className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div className="game-info">
-        {/* <ol>{moves}</ol> */}
-      </div>
-    </div>
+      </section>
+      <section className="game-info">{/* <ol>{moves}</ol> */}</section>
+    </main>
   );
-}
-
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-
-  return false;
 }
