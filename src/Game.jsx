@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./App.css";
 import Board from "./components/Board";
+import Info from "./components/info";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -19,21 +20,6 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  // const moves = history.map((squares, move) => {
-  //   let description = '';
-  //   if (move > 0) {
-  //     description = 'Move #' + move;
-  //   } else {
-  //     description = 'Game start';
-  //   }
-
-  //   return (
-  //     <li key={move}>
-  //       <button onClick={() => jumpTo(move)}>{description}</button>
-  //     </li>
-  //   );
-  // });
-
   return (
     <main className="game">
       <header>
@@ -44,7 +30,9 @@ export default function Game() {
       <section className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </section>
-      <section className="game-info">{/* <ol>{moves}</ol> */}</section>
+      <section className="game-info">
+        {/* <Info history={history} jumpTo={jumpTo} /> */}
+      </section>
     </main>
   );
 }
