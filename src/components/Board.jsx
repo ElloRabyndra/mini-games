@@ -20,9 +20,9 @@ export default function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
-    <section className="size-80 md:size-96 p-4 bg-secondary rounded-2xl">
-      <h1 className="text-center text-2xl md:text-3xl font-bold">{status}</h1>
-      <div className="p-4 flex flex-wrap justify-center items-center gap-4">
+    <section className="size-80 lg:size-96 p-4 bg-secondary rounded-2xl">
+      <h1 className="text-center text-2xl lg:text-3xl font-bold">{status}</h1>
+      <main className="p-4 flex flex-wrap justify-center items-center gap-4">
         <Square value={squares[0]} onSquereClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquereClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquereClick={() => handleClick(2)} />
@@ -32,7 +32,7 @@ export default function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[6]} onSquereClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquereClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquereClick={() => handleClick(8)} />
-      </div>
+      </main>
     </section>
   );
 }

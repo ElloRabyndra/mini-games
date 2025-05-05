@@ -23,14 +23,12 @@ export default function Game() {
   return (
     <main className="game">
       <header>
-        <h1 className="m-4 text-center text-4xl md:text-5xl font-bold ">
+        <h1 className="m-2 lg:m-5 text-center text-3xl lg:text-5xl font-bold ">
           Tic-Tac-Toe
         </h1>
       </header>
-      <section className="game-board">
+      <section className="relative space-y-5">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </section>
-      <section className="game-info">
         <Info history={history} jumpTo={jumpTo} />
       </section>
     </main>
