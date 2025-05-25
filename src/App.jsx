@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./css/App.css";
 import Board from "./components/Board";
-import Info from "./components/info";
+import Info from "./components/Info";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -23,7 +23,7 @@ export default function Game() {
   return (
     <main className="game">
       <header>
-        <h1 className="m-2 lg:m-5 text-center text-3xl lg:text-5xl font-bold ">
+        <h1 className="m-2 text-3xl font-bold text-center lg:m-5 lg:text-5xl ">
           Tic-Tac-Toe
         </h1>
       </header>
