@@ -15,4 +15,4 @@ It serves as a learning exercise to understand the fundamentals of **React compo
 
 ## 🚀 Deployment
 
-You can access the deployed version of this project here: [Mini Game]()
+You can access the deployed version of this project here: [Mini Game](https://mini-games-black-nine.vercel.app/)
